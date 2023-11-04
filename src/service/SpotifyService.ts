@@ -25,7 +25,7 @@ export class SpotifyService {
 
     search = async (query: string, offset: number): Promise<TracksReponse> => {
         let limit = 20;
-        let res: any = await this.spotifyApi.search(query, ['track', 'album', 'show', 'playlist', 'show', 'episode'])
+        let res: any = await this.spotifyApi.search(query, ['track'])
         return res.body
     }
 
